@@ -44,6 +44,8 @@ GreaterThan
   prettyPrint (Polygon 5 6.6)      ~> "This figure is a regular polygon that has 5 sides, each of length 6.6"
   ```
 
+- `sortShapes :: [Shape] -> [Shape]`, която сортира възходящо списък от фигури на база техния периметър.
+
 ## Задача 03
 
 Да се дефинира алгебричен тип данни, представящ наредена двойка,
