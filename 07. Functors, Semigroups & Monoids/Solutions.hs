@@ -84,13 +84,13 @@ instance Functor (Either a) where
   fmap _ (Left x) = Left x
   fmap f (Right y) = Right $ f y
 
--- за домашно 1: може ли да бъде фуктор в първия компонент?
+-- за домашно 1: може ли да бъде фуктор в първия си аргумент?
 instance Functor ((,) a) where
   fmap f (x,y) = (x, f y)
 
 -- (->) a == a -> _
 
--- за домашно 2: може ли да бъде фуктор в първия компонент?
+-- за домашно 2: може ли да бъде фуктор в първия си агргумент?
 instance Functor ((->) a) where
   -- fmap :: (b -> c) -> (a -> b) -> (a -> c)
   fmap = (.)
