@@ -84,16 +84,18 @@ instance Functor (Either a) where
   fmap _ (Left x) = Left x
   fmap f (Right y) = Right $ f y
 
--- фуктор в първия компонент
+-- за домашно 1: може ли да бъде фуктор в първия компонент?
 instance Functor ((,) a) where
   fmap f (x,y) = (x, f y)
 
 -- (->) a == a -> _
 
--- фуктор в първия компонент
+-- за домашно 2: може ли да бъде фуктор в първия компонент?
 instance Functor ((->) a) where
   -- fmap :: (b -> c) -> (a -> b) -> (a -> c)
   fmap = (.)
+
+-- за домашно 3: да се докаже, че [] и Maybe са функтори
 
 add1 :: (->) Int Int
 add1 = undefined
